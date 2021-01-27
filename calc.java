@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 public class calc {
     private String action = "";
+    private String actn = "first";
     private double a;
 
 
@@ -65,43 +66,43 @@ public class calc {
             case "minus" -> {
                 a -= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "multiply" -> {
                 a *= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "divide" -> {
                 a /= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "sqrt" -> {
                 a = Math.sqrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "cbrt" ->{
                 a = Math.cbrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "squared" ->{
                 a *= a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "cubed" ->{
                 a *= a*a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
 
             default -> {
                 a += Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
         }
         action = "plus";
@@ -163,43 +164,45 @@ public class calc {
             case "plus" -> {
                 a += Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
+
             }
             case "minus" -> {
                 a -= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "divide" -> {
                 a /= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "sqrt" -> {
                 a = Math.sqrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "cbrt" ->{
                 a = Math.cbrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "squared" ->{
                 a *= a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "cubed" ->{
                 a *= a*a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
 
             default -> {
+                if(actn.equals("first")) a = 1;
                 a *= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
         }
         action = "multiply";
@@ -210,48 +213,46 @@ public class calc {
             case "plus" -> {
                 a += Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "minus" -> {
                 a -= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "multiply" -> {
                 a *= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "divide" -> {
                 a /= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
-            }
+                actn = "";            }
             case "sqrt" -> {
                 a = Math.sqrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
-            }
+                actn = "";            }
             case "cbrt" ->{
                 a = Math.cbrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
-            }
+                actn = "";            }
             case "squared" ->{
                 a *= a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "cubed" ->{
                 a *= a*a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
 
             default -> {
-                a += Double.parseDouble(textField.getText());
+                if(actn.equals("first")) a = 1;
+                a /= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
         }
         action = "divide";
@@ -275,43 +276,38 @@ public class calc {
             case "minus" -> {
                 a -= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "multiply" -> {
                 a *= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "divide" -> {
                 a /= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
-            }
-            case "sqrt" -> {
-                a = Math.sqrt(Double.parseDouble(textField.getText()));
-                textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "cbrt" ->{
                 a = Math.cbrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "squared" ->{
                 a *= a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "cubed" ->{
                 a *= a*a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
 
             default -> {
                 a = Math.sqrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
         }
         action = "sqrt";
@@ -323,43 +319,44 @@ public class calc {
             case "plus" -> {
                 a += Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "minus" -> {
                 a -= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "multiply" -> {
                 a *= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "divide" -> {
                 a /= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "sqrt" -> {
                 a = Math.sqrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "cbrt" ->{
                 a = Math.cbrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "cubed" ->{
                 a *= a*a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
 
             default -> {
+                if(actn.equals("first")) a = 1;
                 a *= a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
         }
         action = "squared";
@@ -371,44 +368,45 @@ public class calc {
             case "plus" -> {
                 a += Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "minus" -> {
                 a -= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "multiply" -> {
                 a *= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "divide" -> {
                 a /= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "sqrt" -> {
                 a = Math.sqrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "squared" ->{
                 a *= a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "cubed" ->{
+                if(actn.equals("first")) a = 1;
                 a *= a*a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
 
             default -> {
                 a = Math.cbrt(Double.parseDouble(textField.getText()));
 
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
         }
         action = "cubed";
@@ -419,43 +417,44 @@ public class calc {
             case "plus" -> {
                 a += Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "minus" -> {
                 a -= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "multiply" -> {
                 a *= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "divide" -> {
                 a /= Double.parseDouble(textField.getText());
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "sqrt" -> {
                 a = Math.sqrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "cbrt" ->{
                 a = Math.cbrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
             case "squared" ->{
                 a *= a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
 
             default -> {
+                if(actn.equals("first")) a = 1;
                 a *= a*a;
                 textField.setText("");
-                System.out.println(a);
+                actn = "";
             }
         }
         action = "cubed";
