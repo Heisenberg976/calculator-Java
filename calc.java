@@ -150,7 +150,11 @@ public class calc {
             }
 
             default -> {
-                a -= Double.parseDouble(textField.getText());
+                if(actn.equals("first")){
+                    a = Double.parseDouble((textField.getText()));
+                }
+                else a -= Double.parseDouble(textField.getText());
+
                 textField.setText("");
                 System.out.println(a);
             }
@@ -199,8 +203,11 @@ public class calc {
             }
 
             default -> {
-                if(actn.equals("first")) a = 1;
-                a *= Double.parseDouble(textField.getText());
+                if(actn.equals("first")){
+                    a = 1;
+                    a = Double.parseDouble(textField.getText());
+                }
+               else  a *= Double.parseDouble(textField.getText());
                 textField.setText("");
                 actn = "";
             }
@@ -249,8 +256,11 @@ public class calc {
             }
 
             default -> {
-                if(actn.equals("first")) a = 1;
-                a /= Double.parseDouble(textField.getText());
+                if(actn.equals("first")){
+                    a = 1;
+                    a = Double.parseDouble(textField.getText());
+                }
+               else  a /= Double.parseDouble(textField.getText());
                 textField.setText("");
                 actn = "";
             }
@@ -353,7 +363,9 @@ public class calc {
             }
 
             default -> {
-                if(actn.equals("first")) a = 1;
+                if(actn.equals("first")){
+                    a = Double.parseDouble(textField.getText());
+                }
                 a *= a;
                 textField.setText("");
                 actn = "";
@@ -403,8 +415,11 @@ public class calc {
             }
 
             default -> {
-                a = Math.cbrt(Double.parseDouble(textField.getText()));
+                if(actn.equals("first")){
+                    a = Math.cbrt(Double.parseDouble(textField.getText()));
 
+                }
+                else a *= Math.cbrt(Double.parseDouble(textField.getText()));
                 textField.setText("");
                 actn = "";
             }
@@ -451,8 +466,11 @@ public class calc {
             }
 
             default -> {
-                if(actn.equals("first")) a = 1;
-                a *= a*a;
+                if(actn.equals("first")){
+                    a =  Double.parseDouble(textField.getText());
+                    a *= a*a;
+                }
+                else a *= a*a;
                 textField.setText("");
                 actn = "";
             }
@@ -586,6 +604,7 @@ public class calc {
                 }
                 textField.setText(Double.toString(a));
                 a = 0;
+                actn = "first";
             }
             case "minus" -> {
               if(textField.getText().length()>0){
@@ -594,6 +613,7 @@ public class calc {
                 }
                 textField.setText(Double.toString(a));
                 a = 0;
+                actn = "first";
             }
             case "multiply" -> {
                 if(textField.getText().length()>0){
@@ -602,6 +622,7 @@ public class calc {
                 }
                 textField.setText(Double.toString(a));
                 a = 0;
+                actn = "first";
             }
             case "divide" -> {
                 if(textField.getText().length()>0){
@@ -610,6 +631,7 @@ public class calc {
                 }
                 textField.setText(Double.toString(a));
                 a = 0;
+                actn = "first";
             }
             case "sqrt" -> {
                 if(textField.getText().length()>0){
@@ -618,6 +640,7 @@ public class calc {
                 }
                 textField.setText(Double.toString(a));
                 a = 0;
+                actn = "first";
             }
             case "cbrt" ->{
                 if(textField.getText().length()>0){
@@ -626,6 +649,7 @@ public class calc {
                 }
                 textField.setText(Double.toString(a));
                 a = 0;
+                actn = "first";
             }
             case "squared" ->{
                 if(textField.getText().length()>0){
@@ -634,6 +658,7 @@ public class calc {
                 }
                 textField.setText(Double.toString(a));
                 a = 0;
+                actn = "first";
             }
             case "cubed" ->{
                 if(textField.getText().length()>0){
@@ -642,6 +667,7 @@ public class calc {
                 }
                 textField.setText(Double.toString(a));
                 a = 0;
+                actn = "first";
             }
         }
         action = "";
