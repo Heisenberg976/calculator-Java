@@ -7,8 +7,7 @@ import java.awt.event.ActionListener;
 
 public class calc {
     private String action = "";
-    private double a,b;
-    private String s;
+    private double a;
 
 
     public void addOne(JTextField textField) {
@@ -113,8 +112,8 @@ public class calc {
     public void addMinus(JTextField textField) {
 
         switch (action) {
-            case "minus" -> {
-                a -= Double.parseDouble(textField.getText());
+            case "plus" -> {
+                a += Double.parseDouble(textField.getText());
                 textField.setText("");
                 System.out.println(a);
             }
@@ -150,7 +149,7 @@ public class calc {
             }
 
             default -> {
-                a += Double.parseDouble(textField.getText());
+                a -= Double.parseDouble(textField.getText());
                 textField.setText("");
                 System.out.println(a);
             }
@@ -161,13 +160,13 @@ public class calc {
 
     public void addmultiply(JTextField textField) {
         switch (action) {
-            case "minus" -> {
-                a -= Double.parseDouble(textField.getText());
+            case "plus" -> {
+                a += Double.parseDouble(textField.getText());
                 textField.setText("");
                 System.out.println(a);
             }
-            case "multiply" -> {
-                a *= Double.parseDouble(textField.getText());
+            case "minus" -> {
+                a -= Double.parseDouble(textField.getText());
                 textField.setText("");
                 System.out.println(a);
             }
@@ -198,7 +197,7 @@ public class calc {
             }
 
             default -> {
-                a += Double.parseDouble(textField.getText());
+                a *= Double.parseDouble(textField.getText());
                 textField.setText("");
                 System.out.println(a);
             }
@@ -208,6 +207,11 @@ public class calc {
 
     public void addDivide(JTextField textField) {
         switch (action) {
+            case "plus" -> {
+                a += Double.parseDouble(textField.getText());
+                textField.setText("");
+                System.out.println(a);
+            }
             case "minus" -> {
                 a -= Double.parseDouble(textField.getText());
                 textField.setText("");
@@ -316,6 +320,11 @@ public class calc {
     public void squared(JTextField textField) {
 
         switch (action) {
+            case "plus" -> {
+                a += Double.parseDouble(textField.getText());
+                textField.setText("");
+                System.out.println(a);
+            }
             case "minus" -> {
                 a -= Double.parseDouble(textField.getText());
                 textField.setText("");
@@ -341,11 +350,6 @@ public class calc {
                 textField.setText("");
                 System.out.println(a);
             }
-            case "squared" ->{
-                a *= a;
-                textField.setText("");
-                System.out.println(a);
-            }
             case "cubed" ->{
                 a *= a*a;
                 textField.setText("");
@@ -353,7 +357,7 @@ public class calc {
             }
 
             default -> {
-                a += Double.parseDouble(textField.getText());
+                a *= a;
                 textField.setText("");
                 System.out.println(a);
             }
@@ -364,6 +368,11 @@ public class calc {
 
     public void cubeRoot(JTextField textField) {
         switch (action) {
+            case "plus" -> {
+                a += Double.parseDouble(textField.getText());
+                textField.setText("");
+                System.out.println(a);
+            }
             case "minus" -> {
                 a -= Double.parseDouble(textField.getText());
                 textField.setText("");
@@ -384,11 +393,6 @@ public class calc {
                 textField.setText("");
                 System.out.println(a);
             }
-            case "cbrt" ->{
-                a = Math.cbrt(Double.parseDouble(textField.getText()));
-                textField.setText("");
-                System.out.println(a);
-            }
             case "squared" ->{
                 a *= a;
                 textField.setText("");
@@ -401,7 +405,8 @@ public class calc {
             }
 
             default -> {
-                a += Double.parseDouble(textField.getText());
+                a = Math.cbrt(Double.parseDouble(textField.getText()));
+
                 textField.setText("");
                 System.out.println(a);
             }
@@ -411,6 +416,11 @@ public class calc {
 
     public void cubed(JTextField textField) {
         switch (action) {
+            case "plus" -> {
+                a += Double.parseDouble(textField.getText());
+                textField.setText("");
+                System.out.println(a);
+            }
             case "minus" -> {
                 a -= Double.parseDouble(textField.getText());
                 textField.setText("");
@@ -441,14 +451,9 @@ public class calc {
                 textField.setText("");
                 System.out.println(a);
             }
-            case "cubed" ->{
-                a *= a*a;
-                textField.setText("");
-                System.out.println(a);
-            }
 
             default -> {
-                a += Double.parseDouble(textField.getText());
+                a *= a*a;
                 textField.setText("");
                 System.out.println(a);
             }
