@@ -494,6 +494,7 @@ public class calc {
         c.setPreferredSize(new Dimension(4,100));
         JButton button = new JButton("Solve");
         JTextField solution = new JTextField();
+        solution.setEditable(false);
         valueOfA.setText("1");
         valueOfB.setText("1");
         valueOfC.setText("0");
