@@ -478,7 +478,7 @@ public class calc {
         action = "cubed";
 
     }
-
+//Quadratic equation
     public void quadratic() {
         JFrame frame1 = new JFrame("quadratic");
         frame1.setSize(550,500);
